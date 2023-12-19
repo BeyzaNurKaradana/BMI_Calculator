@@ -17,23 +17,24 @@
             
             </div>
             <div class="col-12">
-                <label >Gender: </label>
+                
                 
                 <div>
-                    <label for="genderF">
-                        <input id="genderF" type="radio"> Female
-                    </label>
-    
-                    <label for="genderM">
-                        <input id="genderM" type="radio"> Male
-                    </label>
+                   
+                    <form class="mt-5">
+                        <label >Gender: </label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="Male" name="gender" value="male">
+                        <label for="male">Male</label>
+                    </form> 
 
                     <div class="mt-5">
-                        <input type="number"  placeholder="Enter Your Height(m)" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input type="number" step="0.01"   placeholder="Enter Your Height(m)" >
                     </div>
 
                     <div class="mt-4">
-                        <input type="number"  placeholder="Enter Your Height(m)" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input type="number" step="0.1"  placeholder="Enter Your Weight" >
                     </div>
 
                     <div class="mt-4">
