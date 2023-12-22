@@ -4,6 +4,16 @@ function calculate() {
   let weight = document.getElementById("weight").value;
   let bmi = weight / (height * height);
 
+  /* if (!gender || height === "" || weight === "") {
+    alert("Lütfen cinsiyetinizi, boyunuzu ve kilonuzu girin.");
+    return; // Stop the function if any values are missing
+  }
+ */
+  if (!gender) {
+    alert("Please select your gender!");
+  } else if (height === "" || weight === "") {
+    alert("Please enter your height and weight!");
+  }
  
 
   if (gender.value === "female") {
