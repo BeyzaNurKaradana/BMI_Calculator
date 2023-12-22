@@ -2,23 +2,29 @@ function calculate() {
   let gender = document.querySelector("input[name='gender']:checked");
   let height = document.getElementById("height").value;
   let weight = document.getElementById("weight").value;
-  let bmi = weight / (height * height);
+  
 
 
   if (gender !== null && (height === "" || weight === "")) {
     alert("Please enter your height and weight!");
+    document.getElementById("conclusion").innerHTML = "";
+    return;
   } else if (gender === null && (height === "" && weight !== "")) {
     alert("Please enter your gender and height!");
+    document.getElementById("conclusion").innerHTML = "";
+    return;
   } else if (gender === null && (height !== "" && weight === "")) {
     alert("Please enter your gender and weight!");
+    document.getElementById("conclusion").innerHTML = "";
+    return;
   } else if (gender === null && (height !== "" || weight !== "")) {
     alert("Please enter your gender!");
-  } else{
-    alert("Please enter your gender height, and weigt!");
-    
-  }
+    document.getElementById("conclusion").innerHTML = "";
+    return;
+  } 
  
 
+  let bmi = weight / (height * height);
   if (gender.value === "female") {
     if (bmi < 18.5) {
       document.getElementById("conclusion").innerHTML = "Underweight";
