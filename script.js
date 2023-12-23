@@ -6,26 +6,14 @@ function calculate() {
 
   height = parseFloat(height) / 100;
 
-  if (gender !== null && (height === "" || weight === "")) {
-    alert("Please enter your height and weight!");
-    document.getElementById("conclusion").innerHTML = "";
-    return;
-  } else if (gender === null && height === "" && weight !== "") {
-    alert("Please enter your gender and height!");
-    document.getElementById("conclusion").innerHTML = "";
-    return;
-  } else if (gender === null && height !== "" && weight === "") {
-    alert("Please enter your gender and weight!");
-    document.getElementById("conclusion").innerHTML = "";
-    return;
-  } else if (gender === null && (height !== "" || weight !== "")) {
-    alert("Please enter your gender!");
-    document.getElementById("conclusion").innerHTML = "";
-    return;
-  } else if (gender === null && height === "" && weight === "") {
+
+
+  if (gender === null || height === "" || weight === "") {
     alert("Please enter your gender height, and weight!");
     return;
   }
+
+  
 
   let bmi = weight / (height * height);
   if (gender.value === "female") {
