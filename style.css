@@ -14,6 +14,7 @@ body {
 #height,
 #weight {
   width: 13.5rem;
+  height: 3rem;
 }
 
 .custom-btn {
@@ -114,6 +115,18 @@ body {
 input{
     border: 3px solid #1797cf;
     
+}
+
+h1{
+    font-size: 3rem;
+}
+
+form{
+    font-size: 2rem;
+}
+
+.input-one, .input-two{
+    height: ;
 }
 
 
